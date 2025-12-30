@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REMAB Ascenseurs</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; color: #222; }
+    header { background: #0f172a; color: #fff; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { margin: 0; font-size: 22px; }
+    .lang button { margin-left: 5px; padding: 5px 10px; cursor: pointer; }
+    section { padding: 40px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #0f172a; }
+    .services div { background: #fff; padding: 15px; margin: 10px 0; border-radius: 8px; }
+    footer { background: #0f172a; color: #fff; padding: 20px; text-align: center; }
+    a { color: #2563eb; text-decoration: none; }
+  </style>
+</head>
+<body><header>
+  <h1 id="title">REMAB Ascenseurs</h1>
+  <div class="lang">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('fr')">FR</button>
+  </div>
+</header><section>
+  <h2 id="welcome">Welcome</h2>
+  <p id="intro">REMAB Ascenseurs is a professional elevator company specializing in installation, maintenance, and repair of elevators.</p>
+</section><section class="services">
+  <h2 id="servicesTitle">Our Services</h2>
+  <div id="s1">Elevator installation for residential and commercial buildings.</div>
+  <div id="s2">Maintenance and regular safety inspections.</div>
+  <div id="s3">Fast and reliable elevator repair services.</div>
+</section><section>
+  <h2 id="contactTitle">Contact Us</h2>
+  <p><strong>Phone:</strong> +212 661456471 / +212 66294407</p>
+  <p><strong>Email:</strong> <a href="mailto:remabascenseurs@gmail.com">remabascenseurs@gmail.com</a></p>
+  <p><strong>Facebook:</strong> <a href="https://www.facebook.com/search/top?q=remab%20ascenseurs" target="_blank">REMAB Ascenseurs</a></p>
+</section><footer>
+  <p id="footerText">© 2025 REMAB Ascenseurs – All rights reserved</p>
+</footer><script>
+  const content = {
+    en: {
+      welcome: "Welcome",
+      intro: "REMAB Ascenseurs is a professional elevator company specializing in installation, maintenance, and repair of elevators.",
+      servicesTitle: "Our Services",
+      s1: "Elevator installation for residential and commercial buildings.",
+      s2: "Maintenance and regular safety inspections.",
+      s3: "Fast and reliable elevator repair services.",
+      contactTitle: "Contact Us",
+      footerText: "© 2025 REMAB Ascenseurs – All rights reserved"
+    },
+    fr: {
+      welcome: "Bienvenue",
+      intro: "REMAB Ascenseurs est une entreprise professionnelle spécialisée dans l'installation, la maintenance et la réparation des ascenseurs.",
+      servicesTitle: "Nos Services",
+      s1: "Installation d'ascenseurs pour bâtiments résidentiels et commerciaux.",
+      s2: "Maintenance et inspections de sécurité régulières.",
+      s3: "Service de réparation d'ascenseurs rapide et fiable.",
+      contactTitle: "Contactez-nous",
+      footerText: "© 2025 REMAB Ascenseurs – Tous droits réservés"
+    }
+  };
+
+  function setLang(lang) {
+    document.getElementById('welcome').innerText = content[lang].welcome;
+    document.getElementById('intro').innerText = content[lang].intro;
+    document.getElementById('servicesTitle').innerText = content[lang].servicesTitle;
+    document.getElementById('s1').innerText = content[lang].s1;
+    document.getElementById('s2').innerText = content[lang].s2;
+    document.getElementById('s3').innerText = content[lang].s3;
+    document.getElementById('contactTitle').innerText = content[lang].contactTitle;
+    document.getElementById('footerText').innerText = content[lang].footerText;
+  }
+</script></body>
+</html>
